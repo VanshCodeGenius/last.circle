@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11150f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>LAST CIRCLE</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="hud">
+    <div class="top-left"><div class="brand">LAST CIRCLE</div><div id="status">20 ALIVE</div></div>
+    <div id="zone-warning"></div>
+    <div class="bottom-left">
+      <div class="health-row"><span>HP</span><div class="health-track"><div id="health"></div></div><b id="health-text">100</b></div>
+      <div id="ammo">30 / 120</div><div id="weapon">RIFLE</div>
+    </div>
+    <div class="minimap-wrap"><canvas id="minimap" width="170" height="170"></canvas></div>
+  </div>
+  <div id="touch-controls" aria-label="Touch controls">
+    <div id="joystick" aria-label="Movement joystick"><div id="joystick-knob"></div></div>
+    <button id="touch-fire" aria-label="Fire at nearest opponent">FIRE</button>
+  </div>
+  <div id="start" class="overlay">
+    <div class="panel"><div class="eyebrow">SOLO · LIVE FIRE</div><h1>LAST CIRCLE</h1>
+      <p>Survive 19 rivals. Enter the safe zone. Be the last one standing.</p>
+      <button id="play">DEPLOY</button>
+      <div class="controls"><span>WASD / ARROWS</span><span>MOVE</span><span>MOUSE</span><span>AIM</span><span>CLICK</span><span>SHOOT</span><span>R</span><span>RELOAD</span></div>
+      <div class="mobile-help">PHONE: drag the left pad to move; hold FIRE to auto-aim and shoot.</div>
+    </div>
+  </div>
+  <div id="result" class="overlay hidden">
+    <div class="panel"><div id="place" class="eyebrow">#1</div><h1 id="result-title">VICTORY</h1>
+      <p id="result-detail"></p><button id="again">PLAY AGAIN</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

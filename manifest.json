@@ -1,0 +1,18 @@
+{
+  "name": "Last Circle",
+  "short_name": "Last Circle",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#11150f",
+  "theme_color": "#11150f",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
